@@ -6,6 +6,7 @@
 #include "HEADERS/Day2.h"
 #include "HEADERS/Day3.h"
 #include "HEADERS/Day4.h"
+#include "HEADERS/Day5.h"
 
 using std::cout;
 using std::endl;
@@ -16,6 +17,7 @@ void Day1();
 void Day2();
 void Day3();
 void Day4();
+void Day5();
 
 int main()
 {
@@ -23,6 +25,7 @@ int main()
     Day2();
     Day3();
     Day4();
+    Day5();
 }
 
 void Day1()
@@ -51,7 +54,12 @@ void Day4()
 {
     vector<string> day4Input = GetCredentials("INPUT-FILES/Day-4-Input.txt");
     //day4Input = GetCredentials("INPUT-FILES/Day-4-Input-2.txt");
-    cout << "Day 3, Task 1: " << CountContainsRequiredFields(day4Input, GenerateRequiredFields()) << endl;
+    cout << "Day 4, Task 1: " << CountContainsRequiredFields(day4Input, GenerateRequiredFields()) << endl;
     //vector<string> day4Input = GetCredentials("INPUT-FILES/Day-4-Input-3-Invalid (copy).txt");
-    cout << "Day 3, Task 2: " << CountValidCredentials(day4Input, GenerateRequiredFields()) << endl;
+    cout << "Day 4, Task 2: " << CountValidCredentials(day4Input, GenerateRequiredFields()) << endl;
+}
+
+void Day5()
+{
+     cout << "Day 5, Task 1: " << endl;
 }
