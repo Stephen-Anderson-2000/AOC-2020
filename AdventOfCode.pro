@@ -7,6 +7,7 @@ SOURCES += \
         main.cpp
 
 HEADERS += \
-    Day1.h \
-    Day2.h \
-    Day3.h
+    HEADERS/Day1.h \
+    HEADERS/Day2.h \
+    HEADERS/Day3.h \
+    HEADERS/Day4.h
