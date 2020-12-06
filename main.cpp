@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <utility>
 #include <vector>
 
@@ -11,6 +12,7 @@
 using std::cout;
 using std::endl;
 using std::pair;
+using std::string;
 using std::vector;
 
 void Day1();
@@ -61,5 +63,7 @@ void Day4()
 
 void Day5()
 {
-     cout << "Day 5, Task 1: " << endl;
+    vector<string> day5Input = GetTickets("INPUT-FILES/Day-5-Input.txt");
+    //day5Input = GetTickets("INPUT-FILES/Day-5-Input-2.txt");
+    cout << "Day 5, Task 1: " << GetMaxSeatID(day5Input) <<  endl;
 }

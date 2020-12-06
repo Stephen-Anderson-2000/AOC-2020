@@ -26,6 +26,10 @@ vector<string> GetTrees(string fileName)
                 lines.push_back(line);
             }
         }
+        if (!line.empty())
+        {
+            lines.push_back(line);
+        }
     }
     myFile.close();
     return lines;
