@@ -11,4 +11,6 @@ HEADERS += \
     HEADERS/Day2.h \
     HEADERS/Day3.h \
     HEADERS/Day4.h \
-    HEADERS/Day5.h
+    HEADERS/Day5.h \
+    HEADERS/Day6.h \
+    HEADERS/Day7.h

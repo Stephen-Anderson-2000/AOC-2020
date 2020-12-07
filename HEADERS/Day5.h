@@ -5,6 +5,7 @@
 #include "Day3.h"
 
 
+#include <algorithm>
 #include <cmath>
 #include <utility>
 #include <string>
@@ -15,6 +16,7 @@ using std::ceil;
 using std::floor;
 using std::pair;
 using std::pow;
+using std::sort;
 using std::stoi;
 using std::string;
 using std::vector;
@@ -78,6 +80,32 @@ int GetMaxSeatID(vector<string> tickets)
         if (seatID > maxID) { maxID = seatID; }
     }
     return maxID;
+}
+
+vector<int> SortTickets(vector<string> tickets)
+{
+    vector<int> ticketIDs;
+    for (unsigned int i = 0; i < tickets.size(); i++)
+    {
+        ticketIDs.push_back(GetSeatID(tickets[i]));
+    }
+    sort(ticketIDs.begin(), ticketIDs.end());
+    return ticketIDs;
+}
+
+int FindMySeatID(vector<string> tickets)
+{
+    vector<int> ticketIDs = SortTickets(tickets);
+    for (unsigned int i = 1; i < ticketIDs.size(); i++)
+    {
+        int id1 = ticketIDs[i - 1];
+        int id2 = ticketIDs[i];
+        if (id1 != (id2 -1))
+        {
+            return (id2 - 1);
+        }
+    }
+    return -1;
 }
 
 #endif // DAY5_H

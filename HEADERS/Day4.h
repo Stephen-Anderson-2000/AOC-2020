@@ -30,7 +30,7 @@ vector<string> GetCredentials(string fileName)
         while (getline(myFile, line))
         {
             if (line.size() > 0) { fullCredential += line + ' '; }
-            else
+            else if(fullCredential != "")
             {
                 credentials.push_back(fullCredential);
                 fullCredential = "";
